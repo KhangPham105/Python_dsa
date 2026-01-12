@@ -32,3 +32,26 @@ print()
 print(arr2)
 insertion_sort(arr2)
 print(arr2)
+
+def selection_sort(arr):
+    count=len(arr)
+    if (count>1):
+        current=0
+        while (current <count):
+            swap_index=-1
+            min_element=arr[current]
+            walker=current
+            while (walker<count ):
+                if (arr[walker]<min_element):
+                    swap_index=walker
+                    min_element=arr[walker]
+                walker+=1
+            arr[swap_index]=arr[current]
+            arr[current]=min_element
+            current+=1
+
+arr3 = [random.randint(1, 100) for _ in range(10)]
+print()
+print(arr3)
+insertion_sort(arr3)
+print(arr3)

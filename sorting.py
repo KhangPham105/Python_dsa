@@ -11,8 +11,24 @@ def bubble_sort(arr):
 
 arr = [random.randint(1, 100) for _ in range(10)]
 print(arr)
-print()
 bubble_sort(arr)
 print(arr)
 
-def
+def insertion_sort(arr):
+    count=len(arr)
+    if (count >1 ):
+        current=1
+        while (current < count):
+            temp=arr[current]
+            walker=current-1
+            while ((walker>=0) and (temp<arr[walker])):
+                arr[walker+1]=arr[walker]
+                walker-=1
+            arr[walker+1]=temp
+            current+=1
+
+arr2 = [random.randint(1, 100) for _ in range(10)]
+print()
+print(arr2)
+insertion_sort(arr2)
+print(arr2)
